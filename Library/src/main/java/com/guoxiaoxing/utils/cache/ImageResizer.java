@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.guoxiaoxing.utils.bitmap;
+package com.guoxiaoxing.utils.cache;
 
 import android.annotation.TargetApi;
 import android.content.Context;
@@ -22,8 +22,9 @@ import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
-import android.support.v4.BuildConfig;
+
 import android.util.Log;
+import android.support.v4.BuildConfig;
 
 import java.io.FileDescriptor;
 

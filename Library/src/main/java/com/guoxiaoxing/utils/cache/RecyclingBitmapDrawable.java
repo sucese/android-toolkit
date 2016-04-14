@@ -14,14 +14,14 @@
  * limitations under the License.
  */
 
-package com.guoxiaoxing.utils.bitmap;
+package com.guoxiaoxing.utils.cache;
 
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;
-import android.support.v4.BuildConfig;
-import android.util.Log;
 
+import android.util.Log;
+import android.support.v4.BuildConfig;
 
 /**
  * A BitmapDrawable that keeps track of whether it is being displayed or cached.

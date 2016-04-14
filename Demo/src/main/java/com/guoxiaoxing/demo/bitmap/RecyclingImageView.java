@@ -22,7 +22,7 @@ import android.graphics.drawable.LayerDrawable;
 import android.util.AttributeSet;
 import android.widget.ImageView;
 
-import com.guoxiaoxing.utils.bitmap.RecyclingBitmapDrawable;
+import com.guoxiaoxing.utils.cache.RecyclingBitmapDrawable;
 
 
 /**

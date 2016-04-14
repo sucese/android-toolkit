@@ -24,10 +24,11 @@ import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 
+
 import com.guoxiaoxing.demo.R;
-import com.guoxiaoxing.utils.bitmap.ImageFetcher;
-import com.guoxiaoxing.utils.bitmap.ImageWorker;
-import com.guoxiaoxing.utils.bitmap.Utils;
+import com.guoxiaoxing.utils.cache.ImageFetcher;
+import com.guoxiaoxing.utils.cache.ImageWorker;
+import com.guoxiaoxing.utils.cache.Utils;
 
 /**
  * This fragment will populate the children of the ViewPager from {@link ImageDetailActivity}.

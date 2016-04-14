@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.guoxiaoxing.utils.bitmap;
+package com.guoxiaoxing.utils.cache;
 
 import android.content.Context;
 import android.content.res.Resources;
@@ -24,13 +24,12 @@ import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.ColorDrawable;
 import android.graphics.drawable.Drawable;
 import android.graphics.drawable.TransitionDrawable;
-import android.support.v4.BuildConfig;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
-import android.util.Log;
 import android.widget.ImageView;
 
-
+import android.util.Log;
+import android.support.v4.BuildConfig;
 
 import java.lang.ref.WeakReference;
 

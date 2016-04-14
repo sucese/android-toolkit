@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.guoxiaoxing.utils.bitmap;
+package com.guoxiaoxing.utils.cache;
 
 import android.annotation.TargetApi;
 import android.os.Handler;

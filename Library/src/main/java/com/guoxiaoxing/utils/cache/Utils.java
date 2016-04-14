@@ -14,12 +14,13 @@
  * limitations under the License.
  */
 
-package com.guoxiaoxing.utils.bitmap;
+package com.guoxiaoxing.utils.cache;
 
 import android.annotation.TargetApi;
 import android.os.Build;
 import android.os.Build.VERSION_CODES;
 import android.os.StrictMode;
+
 
 
 /**
@@ -29,28 +30,28 @@ public class Utils {
     private Utils() {};
 
 
-//    @TargetApi(VERSION_CODES.HONEYCOMB)
-//    public static void enableStrictMode() {
-//        if (Utils.hasGingerbread()) {
-//            StrictMode.ThreadPolicy.Builder threadPolicyBuilder =
-//                    new StrictMode.ThreadPolicy.Builder()
-//                            .detectAll()
-//                            .penaltyLog();
-//            StrictMode.VmPolicy.Builder vmPolicyBuilder =
-//                    new StrictMode.VmPolicy.Builder()
-//                            .detectAll()
-//                            .penaltyLog();
-//
+    @TargetApi(VERSION_CODES.HONEYCOMB)
+    public static void enableStrictMode() {
+        if (Utils.hasGingerbread()) {
+            StrictMode.ThreadPolicy.Builder threadPolicyBuilder =
+                    new StrictMode.ThreadPolicy.Builder()
+                            .detectAll()
+                            .penaltyLog();
+            StrictMode.VmPolicy.Builder vmPolicyBuilder =
+                    new StrictMode.VmPolicy.Builder()
+                            .detectAll()
+                            .penaltyLog();
+
 //            if (Utils.hasHoneycomb()) {
 //                threadPolicyBuilder.penaltyFlashScreen();
 //                vmPolicyBuilder
 //                        .setClassInstanceLimit(ImageGridActivity.class, 1)
 //                        .setClassInstanceLimit(ImageDetailActivity.class, 1);
 //            }
-//            StrictMode.setThreadPolicy(threadPolicyBuilder.build());
-//            StrictMode.setVmPolicy(vmPolicyBuilder.build());
-//        }
-//    }
+            StrictMode.setThreadPolicy(threadPolicyBuilder.build());
+            StrictMode.setVmPolicy(vmPolicyBuilder.build());
+        }
+    }
 
     public static boolean hasFroyo() {
         // Can use static final constants like FROYO, declared in later versions
