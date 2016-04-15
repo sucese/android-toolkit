@@ -19,8 +19,8 @@ import com.guoxiaoxing.utils.string.StringUtils;
  *
  * Modification history:
  * Date                 Author              Version             Description
- * ------------------------------------------------------------------------
- * 16/4/1 上午11:20      guoxiaoxing         1.0
+ * ----------------------------------------------------------------------------
+ * 16/4/1 上午11:20      guoxiaoxing         1.0                resource utils
  */
 public class ResourceUtils {
 

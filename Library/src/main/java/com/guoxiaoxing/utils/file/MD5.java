@@ -1,76 +1,57 @@
 package com.guoxiaoxing.utils.file;
 
-import java.io.File;
 import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.UnsupportedEncodingException;
-import java.nio.MappedByteBuffer;
-import java.nio.channels.FileChannel;
+import java.io.InputStream;
 import java.security.MessageDigest;
-import java.security.NoSuchAlgorithmException;
+
+import android.text.TextUtils;
 
 /**
  * Author: guoxiaoxing
  * Email: guoxiaoxingv@163.com
  * Site: https://github.com/guoxiaoxing
- * Date: 16/4/1 下午1:35
- * Function:
- * 
+ * Date: 16/4/15 下午5:17
+ * Function: md5
+ *
  * Modification history:
  * Date                 Author              Version             Description
- * ------------------------------------------------------------------------
- * 16/4/1 下午1:35      guoxiaoxing          1.0
- */     
-public final class MD5 {
+ * --------------------------------------------------------------------------
+ * 16/4/15 下午5:17      guoxiaoxing          1.0                  md5
+ */
+public class MD5 {
+    private static final char HEX_DIGITS[] = {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9',
+            'A', 'B', 'C', 'D', 'E', 'F' };
 
-    private MD5() {
+    public static void main(String[] args) {
+        System.out.println(md5sum("/init.rc"));
     }
 
-    private static final char hexDigits[] =
-            {'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
-
-    public static String toHexString(byte[] bytes) {
-        if (bytes == null) return "";
-        StringBuilder hex = new StringBuilder(bytes.length * 2);
-        for (byte b : bytes) {
-            hex.append(hexDigits[(b >> 4) & 0x0F]);
-            hex.append(hexDigits[b & 0x0F]);
+    public static String toHexString(byte[] b) {
+        StringBuilder sb = new StringBuilder(b.length * 2);
+        for (int i = 0; i < b.length; i++) {
+            sb.append(HEX_DIGITS[(b[i] & 0xf0) >>> 4]);
+            sb.append(HEX_DIGITS[b[i] & 0x0f]);
         }
-        return hex.toString();
+        return sb.toString();
     }
 
-    public static String md5(File file) throws IOException {
-        MessageDigest messagedigest = null;
-        FileInputStream in = null;
-        FileChannel ch = null;
-        byte[] encodeBytes = null;
+    public static String md5sum(String filename) {
+        InputStream fis;
+        byte[] buffer = new byte[1024];
+        int numRead = 0;
+        MessageDigest md5;
         try {
-            messagedigest = MessageDigest.getInstance("MD5");
-            in = new FileInputStream(file);
-            ch = in.getChannel();
-            MappedByteBuffer byteBuffer = ch.map(FileChannel.MapMode.READ_ONLY, 0, file.length());
-            messagedigest.update(byteBuffer);
-            encodeBytes = messagedigest.digest();
-        } catch (NoSuchAlgorithmException neverHappened) {
-            throw new RuntimeException(neverHappened);
-        } finally {
-            IOUtil.closeQuietly(in);
-            IOUtil.closeQuietly(ch);
+            fis = new FileInputStream(filename);
+            md5 = MessageDigest.getInstance("MD5");
+            while ((numRead = fis.read(buffer)) > 0) {
+                md5.update(buffer, 0, numRead);
+            }
+            fis.close();
+            String md5Str = toHexString(md5.digest());
+            return TextUtils.isEmpty(md5Str) ? "" : md5Str;
+        } catch (Exception e) {
+            System.out.println("error");
+            return "";
         }
-
-        return toHexString(encodeBytes);
-    }
-
-    public static String md5(String string) {
-        byte[] encodeBytes = null;
-        try {
-            encodeBytes = MessageDigest.getInstance("MD5").digest(string.getBytes("UTF-8"));
-        } catch (NoSuchAlgorithmException neverHappened) {
-            throw new RuntimeException(neverHappened);
-        } catch (UnsupportedEncodingException neverHappened) {
-            throw new RuntimeException(neverHappened);
-        }
-
-        return toHexString(encodeBytes);
     }
 }
