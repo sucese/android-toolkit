@@ -10,6 +10,8 @@ import android.view.Surface;
 import android.view.Window;
 import android.view.WindowManager;
 
+import java.lang.reflect.Field;
+
 import javax.microedition.khronos.opengles.GL10;
 
 /**
@@ -37,7 +39,7 @@ public final class WindowUtils {
      * 获取当前窗口的旋转角度
      *
      * @param activity activity
-     * @return  int
+     * @return int
      */
     public static int getDisplayRotation(Activity activity) {
         switch (activity.getWindowManager().getDefaultDisplay().getRotation()) {
@@ -57,8 +59,8 @@ public final class WindowUtils {
     /**
      * 当前是否是横屏
      *
-     * @param context  context
-     * @return  boolean
+     * @param context context
+     * @return boolean
      */
     public static boolean isLandscape(Context context) {
         return context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE;
@@ -67,17 +69,19 @@ public final class WindowUtils {
     /**
      * 当前是否是竖屏
      *
-     * @param context  context
-     * @return   boolean
+     * @param context context
+     * @return boolean
      */
     public static boolean isPortrait(Context context) {
         return context.getResources().getConfiguration().orientation == Configuration.ORIENTATION_PORTRAIT;
     }
+
     /**
-     *  调整窗口的透明度  1.0f,0.5f 变暗
-     * @param from  from>=0&&from<=1.0f
-     * @param to  to>=0&&to<=1.0f
-     * @param context  当前的activity
+     * 调整窗口的透明度  1.0f,0.5f 变暗
+     *
+     * @param from    from>=0&&from<=1.0f
+     * @param to      to>=0&&to<=1.0f
+     * @param context 当前的activity
      */
     public static void dimBackground(final float from, final float to, Activity context) {
         final Window window = context.getWindow();
@@ -118,6 +122,28 @@ public final class WindowUtils {
         int[] maxTextureSize = new int[1];
         GLES10.glGetIntegerv(GL10.GL_MAX_TEXTURE_SIZE, maxTextureSize, 0);
         return Math.max(maxTextureSize[0], 2048);
+    }
+
+    /**
+     * get status bar height
+     *
+     * @param context context
+     */
+    public static int getStatusBarHeight(Context context) {
+        Class<?> c = null;
+        Object obj = null;
+        Field field = null;
+        int x = 0, statusBarHeight = 0;
+        try {
+            c = Class.forName("com.android.internal.R$dimen");
+            obj = c.newInstance();
+            field = c.getField("status_bar_height");
+            x = Integer.parseInt(field.get(obj).toString());
+            statusBarHeight = context.getResources().getDimensionPixelSize(x);
+        } catch (Exception e1) {
+            e1.printStackTrace();
+        }
+        return statusBarHeight;
     }
 
     /**
