@@ -2,10 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Demo/Demo.iml" filepath="$PROJECT_DIR$/Demo/Demo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Library/Library.iml" filepath="$PROJECT_DIR$/Library/Library.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Demo/app.iml" filepath="$PROJECT_DIR$/Demo/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/Demo.iml" filepath="$PROJECT_DIR$/demo/Demo.iml" />
       <module fileurl="file://$PROJECT_DIR$/endless-utils.iml" filepath="$PROJECT_DIR$/endless-utils.iml" />
+      <module fileurl="file://$PROJECT_DIR$/library/Library.iml" filepath="$PROJECT_DIR$/library/Library.iml" />
     </modules>
   </component>
 </project>
