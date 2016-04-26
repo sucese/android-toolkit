@@ -50,7 +50,6 @@ public class SDCardUtils {
         return getState().equals(Environment.MEDIA_MOUNTED);
     }
 
-
     /**
      * 获取SD卡的根目录
      *
