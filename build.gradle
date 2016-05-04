@@ -26,4 +26,4 @@ task clean(type: Delete) {
 }
 //https://github.com/msdx/gradle-publish.git
 //https://github.com/guoxiaoxing/endless-utils.git
-apply from: 'https://raw.githubusercontent.com/guoxiaoxing/endless-utils/master/bintray.gradle'
+apply from: 'https://github.com/guoxiaoxing/endless-utils/blob/master/binary.gradle'
