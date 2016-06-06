@@ -10,7 +10,7 @@ import android.net.NetworkInfo;
  * Site: https://github.com/guoxiaoxing
  * Date: 16/4/15 下午3:38
  * Function: wifi utils
- *
+ * <p>
  * Modification history:
  * Date                 Author              Version             Description
  * ------------------------------------------------------------------------

@@ -17,27 +17,32 @@ import java.util.regex.Pattern;
 public class DigitRegex {
 
     /**
-     * 判断是否为浮点数，包括double和float
-     * @autor:chenssy
-     * @data:2014年8月7日
+     * 验证整数（正整数和负整数）
      *
-     * @param value
-     * 			传入的字符串
-     * @return
+     * @param digit 一位或多位0-9之间的整数
+     * @return 验证成功返回true，验证失败返回false
      */
-    public static boolean isDouble(String value) {
-        Pattern pattern = Pattern.compile("^[-\\+]?\\d+\\.\\d+$");
-        return pattern.matcher(value).matches();
+    public static boolean isDigit(String digit) {
+        String regex = "\\-?[1-9]\\d+";
+        return Pattern.matches(regex, digit);
+    }
+
+    /**
+     * 验证整数和浮点数（正负整数和正负浮点数）
+     *
+     * @param decimals 一位或多位0-9之间的浮点数，如：1.23，233.30
+     * @return 验证成功返回true，验证失败返回false
+     */
+    public static boolean isDecimals(String decimals) {
+        String regex = "\\-?[1-9]\\d+(\\.\\d+)?";
+        return Pattern.matches(regex, decimals);
     }
 
     /**
      * 判断是否为整数
-     * @autor:chenssy
-     * @data:2014年8月7日
      *
-     * @param value
-     * 			传入的字符串
-     * @return
+     * @param value 传入的字符串
+     * @return result
      */
     public static boolean isInteger(String value) {
         Pattern pattern = Pattern.compile("^[-\\+]?[\\d]+$");
