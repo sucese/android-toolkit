@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.guoxiaoxing.utils.view;
+package com.guoxiaoxing.utils.app;
 
 import android.content.Context;
 import android.widget.Toast;
