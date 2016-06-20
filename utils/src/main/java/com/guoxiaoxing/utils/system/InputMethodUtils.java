@@ -19,9 +19,7 @@ package com.guoxiaoxing.utils.system;
 import android.app.Activity;
 import android.content.Context;
 import android.view.inputmethod.InputMethodManager;
-import android.widget.EditText;
 
-import com.guoxiaoxing.utils.view.ViewUtils;
 
 /**
  * Author: guoxiaoxing
@@ -36,20 +34,6 @@ import com.guoxiaoxing.utils.view.ViewUtils;
  * 16/4/15 下午5:10      guoxiaoxing          1.0               inputmethod utils
  */
 public class InputMethodUtils {
-
-    /**
-     * 为给定的编辑器开启软键盘
-     *
-     * @param context
-     * @param editText 给定的编辑器
-     */
-    public static void openSoftKeyboard(Context context, EditText editText) {
-        editText.requestFocus();
-        InputMethodManager inputMethodManager = (InputMethodManager) context.getSystemService(
-                Context.INPUT_METHOD_SERVICE);
-        inputMethodManager.showSoftInput(editText, InputMethodManager.SHOW_IMPLICIT);
-        ViewUtils.setEditTextSelectionToEnd(editText);
-    }
 
     /**
      * 关闭软键盘
@@ -75,4 +59,6 @@ public class InputMethodUtils {
                 Context.INPUT_METHOD_SERVICE)).toggleSoftInput(
                 InputMethodManager.SHOW_IMPLICIT, InputMethodManager.HIDE_NOT_ALWAYS);
     }
+
+
 }
