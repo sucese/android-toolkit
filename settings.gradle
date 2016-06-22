@@ -1,1 +1,1 @@
-include ':utils', ':demo'
+include ':toolkit', ':demo'
