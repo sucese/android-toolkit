@@ -72,3 +72,7 @@ Guava的函数式支持可以显著简化代码，但请谨慎使用它
 
 #十三 反射[Reflection]
 Guava 的 Java 反射机制工具类
+
+#Thanks
+
+http://ifeve.com/google-guava/
