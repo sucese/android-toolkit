@@ -1,5 +1,10 @@
 package com.guoxiaoxing.toolkit.app;
 
+import android.app.Activity;
+import android.content.ContentResolver;
+import android.database.Cursor;
+import android.net.Uri;
+
 /**
  * Author: guoxiaoxing
  * Email: guoxiaoxingv@163.com
