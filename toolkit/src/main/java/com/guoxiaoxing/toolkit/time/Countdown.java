@@ -31,7 +31,7 @@ import android.widget.TextView;
  * -------------------------------------------------------------------------
  * 16/4/15 下午4:46      guoxiaoxing          1.0                 count down
  */
-public class Countdown implements Runnable {
+public class  Countdown implements Runnable {
 
 	private int remainingSeconds;
 	private int currentRemainingSeconds;

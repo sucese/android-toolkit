@@ -32,15 +32,10 @@ import javax.security.auth.x500.X500Principal;
 
 /**
  * Author: guoxiaoxing
- * Email: guoxiaoxingv@163.com
- * Site: https://github.com/guoxiaoxing
- * Date: 16/4/1 上午10:16
- * Function: com.demo.utils.app utils
- * <p/>
- * Modification history:
- * Date                 Author              Version             Description
- * ------------------------------------------------------------------------
- * 16/4/1 上午10:16      guoxiaoxing         1.0
+ * Date: 16/6/23 上午10:10
+ * Function: AppUtils
+ * <p>
+ * For more information, you can visit https://github.com/guoxiaoxing or contact me by guoxiaoxingv@163.com
  */
 public class AppUtils {
 
