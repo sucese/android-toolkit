@@ -27,6 +27,7 @@ import android.renderscript.Allocation;
 import android.renderscript.Element;
 import android.renderscript.RenderScript;
 import android.renderscript.ScriptIntrinsicBlur;
+import android.renderscript.Type;
 import android.util.Log;
 
 import java.io.IOException;
@@ -183,7 +184,6 @@ final class BitmapEffectUtils {
     }
 
 
-
     /**
      * Returns a Bitmap representing the thumbnail of the specified Bitmap. The
      * size of the thumbnail is defined by the dimension
@@ -289,7 +289,6 @@ final class BitmapEffectUtils {
         cv.restore();// 存储
         return newb;
     }
-
 
 
     /**
@@ -1428,5 +1427,32 @@ final class BitmapEffectUtils {
             }
         }
         return newBitmap;
+    }
+
+    /**
+     * 虚化图片
+     *
+     * @param context context
+     * @param src src
+     * @param radius radius
+     * @return
+     */
+    public static Bitmap blurBitmap(Context context, Bitmap src, int radius) {
+        Bitmap dest = src.copy(src.getConfig(), true);
+        RenderScript rs = RenderScript.create(context);
+        Allocation allocation = Allocation.createFromBitmap(rs, src);
+        Type t = allocation.getType();
+        Allocation blurredAllocation = Allocation.createTyped(rs, t);
+        ScriptIntrinsicBlur blurScript = ScriptIntrinsicBlur.create(rs, Element.U8_4(rs));
+        blurScript.setRadius(radius);
+        blurScript.setInput(allocation);
+        blurScript.forEach(blurredAllocation);
+        blurredAllocation.copyTo(dest);
+        allocation.destroy();
+        blurredAllocation.destroy();
+        blurScript.destroy();
+        t.destroy();
+        rs.destroy();
+        return dest;
     }
 }
