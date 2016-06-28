@@ -14,3 +14,27 @@
 1. 设置TextView单行显示的时候不要用Lines=1,而要用singleLine="true", 因为魅族部分手机在设置Lines=1的时候，然后TextView的值全为数字的时候会有问题.
 
 #四 三星手机
+
+#五 乐视手机
+
+##5.1 mac系统下usb调试乐视手机
+
+输入命令: system_profiler SPUSBDataType 打印设备信息
+
+```
+X600:
+
+Product ID: 0x1768
+Vendor ID: 0x2b0e
+Version: ff.ff
+Serial Number: 69ZH5LBAHMTOIFKZ
+Speed: Up to 480 Mb/sec
+Manufacturer: MediaTek
+Location ID: 0x14100000 / 8
+Current Available (mA): 500
+Current Required (mA): 192
+```
+
+接下来 vim ~/.android/adb_usb.ini ，新开一行把 Vendor ID 加上。
+
+最后 adb kill-server && adb devices 就可以 adb 调试了。
