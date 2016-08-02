@@ -1,4 +1,4 @@
-package com.guoxiaoxing.toolkit.system;
+package com.guoxiaoxing.toolkit.device;
 
 import android.os.Build;
 
@@ -6,26 +6,22 @@ import java.io.File;
 
 /**
  * Author: guoxiaoxing
- * Email: guoxiaoxingv@163.com
- * Site: https://github.com/guoxiaoxing
- * Date: 16/4/1 上午11:25
- * Function: system utils
- * <p/>
- * Modification history:
- * Date                 Author              Version             Description
- * ------------------------------------------------------------------------
- * 16/4/1 上午11:25      guoxiaoxing         1.0
+ * Date: 16/8/2 下午2:08
+ * Function: 系统工具类
+ * <p>
+ * For more information, you can visit https://github.com/guoxiaoxing or contact me by
+ * guoxiaoxingv@163.com
  */
 public class SystemUtils {
+
+    private SystemUtils() {
+
+    }
 
     /**
      * recommend default thread pool size according to system available processors, {@link #getDefaultThreadPoolSize()}
      **/
     public static final int DEFAULT_THREAD_POOL_SIZE = getDefaultThreadPoolSize();
-
-    private SystemUtils() {
-        throw new AssertionError();
-    }
 
     /**
      * get recommend default thread pool size
@@ -40,7 +36,7 @@ public class SystemUtils {
     /**
      * get recommend default thread pool size
      *
-     * @param max
+     * @param max max
      * @return if 2 * availableProcessors + 1 less than max, return it, else return max;
      */
     public static int getDefaultThreadPoolSize(int max) {
@@ -66,7 +62,7 @@ public class SystemUtils {
      *
      * @return 0：是；小于0：小于4.0；大于0：大于4.0
      */
-    public static int isAPI14() {
-        return Build.VERSION.SDK_INT - 14;
+    public static int getSystemVersion() {
+        return Build.VERSION.SDK_INT;
     }
 }

@@ -67,6 +67,9 @@ public class ClassUtils {
     private static final ConcurrentMap<String, Class<?>> CLASS_CACHE
             = new ConcurrentHashMap<String, Class<?>>();
 
+    private ClassUtils() {
+
+    }
 
     static {
         CLASS_CACHE.put("boolean", boolean.class);
@@ -140,10 +143,6 @@ public class ClassUtils {
         CLASS_CACHE.put("java.lang.Class[]", Class[].class);
         CLASS_CACHE.put("java.lang.Void[]", Void[].class);
         CLASS_CACHE.put("java.util.Date[]", Date[].class);
-    }
-
-    public ClassUtils()  {
-        throw new Error("Do not need instantiate!");
     }
 
     public static Object newInstance(String name) {

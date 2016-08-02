@@ -1,4 +1,4 @@
-package com.guoxiaoxing.toolkit.system;
+package com.guoxiaoxing.toolkit.device;
 
 import android.content.Context;
 import android.content.Intent;
@@ -12,17 +12,17 @@ import java.util.List;
 
 /**
  * Author: guoxiaoxing
- * Email: guoxiaoxingv@163.com
- * Site: https://github.com/guoxiaoxing
- * Date: 16/6/20 上午10:12
- * Function: 相机工具类
+ * Date: 16/8/2 下午2:07
+ * Function:相机工具类
  * <p>
- * Modification history:
- * Date                 Author              Version             Description
- * --------------------------------------------------------------------------
- * 16/6/20 上午10:12      guoxiaoxing          1.0               相机工具类
+ * For more information, you can visit https://github.com/guoxiaoxing or contact me by
+ * guoxiaoxingv@163.com
  */
 public class CameraUtils {
+
+    private CameraUtils(){
+
+    }
 
     /**
      * 是否有拍照应用
@@ -82,6 +82,5 @@ public class CameraUtils {
         }
         return degree;
     }
-
 }
 

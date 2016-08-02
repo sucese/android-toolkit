@@ -1,4 +1,4 @@
-package com.guoxiaoxing.toolkit.app;
+package com.guoxiaoxing.toolkit.device;
 
 import android.annotation.TargetApi;
 import android.app.Activity;

@@ -4,20 +4,21 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.Locale;
 
 /**
  * Author: guoxiaoxing
- * Email: guoxiaoxingv@163.com
- * Site: https://github.com/guoxiaoxing
- * Date: 16/4/15 下午4:50
- * Function: date utils
- *
- * Modification history:
- * Date                 Author              Version             Description
- * -------------------------------------------------------------------------
- * 16/4/15 下午4:50      guoxiaoxing          1.0                date utils
+ * Date: 16/8/2 下午1:58
+ * Function: 日期工具类
+ * <p>
+ * For more information, you can visit https://github.com/guoxiaoxing or contact me by
+ * guoxiaoxingv@163.com
  */
 public class DateUtils {
+
+    private DateUtils() {
+
+    }
 
     /**
      * 英文简写如：2010
@@ -85,13 +86,12 @@ public class DateUtils {
     public static String FORMAT_FULL_CN = "yyyy年MM月dd日  HH时mm分ss秒SSS毫秒";
 
     public static Calendar calendar = null;
-    private static final String FORMAT = "yyyy-MM-dd HH:mm:ss";
 
+    private static final String FORMAT = "yyyy-MM-dd HH:mm:ss";
 
     public static Date str2Date(String str) {
         return str2Date(str, null);
     }
-
 
     public static Date str2Date(String str, String format) {
         if (str == null || str.length() == 0) {
@@ -102,7 +102,7 @@ public class DateUtils {
         }
         Date date = null;
         try {
-            SimpleDateFormat sdf = new SimpleDateFormat(format);
+            SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.CHINA);
             date = sdf.parse(str);
         } catch (Exception e) {
             e.printStackTrace();
@@ -110,13 +110,12 @@ public class DateUtils {
         return date;
     }
 
-
-    public static Calendar str2Calendar(String str) {
-        return str2Calendar(str, null);
+    public static Calendar string2Calendar(String str) {
+        return string2Calendar(str, null);
     }
 
 
-    public static Calendar str2Calendar(String str, String format) {
+    public static Calendar string2Calendar(String str, String format) {
 
         Date date = str2Date(str, format);
         if (date == null) {
@@ -154,7 +153,7 @@ public class DateUtils {
         if (format == null || format.length() == 0) {
             format = FORMAT;
         }
-        SimpleDateFormat sdf = new SimpleDateFormat(format);
+        SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.CHINA);
         String s = sdf.format(d);
         return s;
     }
@@ -172,8 +171,9 @@ public class DateUtils {
 
     /**
      * 获得当前日期的字符串格式
-     * @param format    格式化的类型
-     * @return  返回格式化之后的事件
+     *
+     * @param format 格式化的类型
+     * @return 返回格式化之后的事件
      */
     public static String getCurDateStr(String format) {
         Calendar c = Calendar.getInstance();
@@ -183,48 +183,46 @@ public class DateUtils {
 
 
     /**
-     *
      * @param time 当前的时间
-     * @return  格式到秒
+     * @return 格式到秒
      */
     //
     public static String getMillon(long time) {
 
-        return new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss").format(time);
+        return new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss", Locale.CHINA).format(time);
 
     }
 
 
     /**
-     *
-     * @param time  当前的时间
-     * @return  当前的天
+     * @param time 当前的时间
+     * @return 当前的天
      */
     public static String getDay(long time) {
 
-        return new SimpleDateFormat("yyyy-MM-dd").format(time);
+        return new SimpleDateFormat("yyyy-MM-dd", Locale.CHINA).format(time);
 
     }
 
 
     /**
-     *
      * @param time 时间
      * @return 返回一个毫秒
      */
     // 格式到毫秒
     public static String getSMillon(long time) {
 
-        return new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSS").format(time);
+        return new SimpleDateFormat("yyyy-MM-dd-HH-mm-ss-SSS", Locale.CHINA).format(time);
 
     }
 
 
     /**
      * 在日期上增加数个整月
+     *
      * @param date 日期
-     * @param n 要增加的月数
-     * @return   增加数个整月
+     * @param n    要增加的月数
+     * @return 增加数个整月
      */
     public static Date addMonth(Date date, int n) {
         Calendar cal = Calendar.getInstance();
@@ -234,12 +232,12 @@ public class DateUtils {
 
     }
 
-
     /**
      * 在日期上增加天数
+     *
      * @param date 日期
-     * @param n 要增加的天数
-     * @return   增加之后的天数
+     * @param n    要增加的天数
+     * @return 增加之后的天数
      */
     public static Date addDay(Date date, int n) {
         Calendar cal = Calendar.getInstance();
@@ -254,11 +252,11 @@ public class DateUtils {
      * 获取距现在某一小时的时刻
      *
      * @param format 格式化时间的格式
-     * @param h 距现在的小时 例如：h=-1为上一个小时，h=1为下一个小时
-     * @return  获取距现在某一小时的时刻
+     * @param h      距现在的小时 例如：h=-1为上一个小时，h=1为下一个小时
+     * @return 获取距现在某一小时的时刻
      */
     public static String getNextHour(String format, int h) {
-        SimpleDateFormat sdf = new SimpleDateFormat(format);
+        SimpleDateFormat sdf = new SimpleDateFormat(format, Locale.CHINA);
         Date date = new Date();
         date.setTime(date.getTime() + h * 60 * 60 * 1000);
         return sdf.format(date);
@@ -268,15 +266,15 @@ public class DateUtils {
 
     /**
      * 获取时间戳
+     *
      * @return 获取时间戳
      */
     public static String getTimeString() {
-        SimpleDateFormat df = new SimpleDateFormat(FORMAT_FULL);
+        SimpleDateFormat df = new SimpleDateFormat(FORMAT_FULL, Locale.CHINA);
         Calendar calendar = Calendar.getInstance();
         return df.format(calendar.getTime());
 
     }
-
 
 
     /**
@@ -333,7 +331,8 @@ public class DateUtils {
 
     /**
      * 获得默认的 date pattern
-     * @return  默认的格式
+     *
+     * @return 默认的格式
      */
     public static String getDatePattern() {
 
@@ -401,10 +400,10 @@ public class DateUtils {
      *
      * @param strDate 日期字符串
      * @param pattern 日期格式
-     * @return  提取字符串日期
+     * @return 提取字符串日期
      */
     public static Date parse(String strDate, String pattern) {
-        SimpleDateFormat df = new SimpleDateFormat(pattern);
+        SimpleDateFormat df = new SimpleDateFormat(pattern, Locale.CHINA);
         try {
             return df.parse(strDate);
         } catch (ParseException e) {
@@ -414,13 +413,12 @@ public class DateUtils {
 
     }
 
-
     /**
      * 按用户格式字符串距离今天的天数
      *
-     * @param date 日期字符串
+     * @param date   日期字符串
      * @param format 日期格式
-     * @return  按用户格式字符串距离今天的天数
+     * @return 按用户格式字符串距离今天的天数
      */
     public static int countDays(String date, String format) {
         long t = Calendar.getInstance().getTime().getTime();
