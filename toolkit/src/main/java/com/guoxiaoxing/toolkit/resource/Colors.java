@@ -6,7 +6,7 @@ package com.guoxiaoxing.toolkit.resource;
  * Site: https://github.com/guoxiaoxing
  * Date: 16/4/15 下午4:44
  * Function: colors
- *
+ * <p>
  * Modification history:
  * Date                 Author              Version             Description
  * ------------------------------------------------------------------------
@@ -18,7 +18,7 @@ public final class Colors {
      * Don't let anyone instantiate this class.
      */
     private Colors() {
-        throw new Error("Do not need instantiate!");
+
     }
 
     /**
