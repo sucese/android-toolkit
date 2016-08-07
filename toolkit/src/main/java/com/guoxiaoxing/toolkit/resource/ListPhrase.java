@@ -1,4 +1,4 @@
-package com.guoxiaoxing.toolkit.string;
+package com.guoxiaoxing.toolkit.resource;
 
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;

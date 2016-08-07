@@ -1,6 +1,6 @@
 package com.guoxiaoxing.toolkit.crypto;
 
-import com.guoxiaoxing.toolkit.string.StringUtils;
+import com.guoxiaoxing.toolkit.resource.StringUtils;
 
 import java.util.Collection;
 import java.util.Map;

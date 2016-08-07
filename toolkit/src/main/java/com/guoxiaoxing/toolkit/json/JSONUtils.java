@@ -2,7 +2,7 @@ package com.guoxiaoxing.toolkit.json;
 
 import com.guoxiaoxing.toolkit.collection.ArrayUtils;
 import com.guoxiaoxing.toolkit.collection.MapUtils;
-import com.guoxiaoxing.toolkit.string.StringUtils;
+import com.guoxiaoxing.toolkit.resource.StringUtils;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.guoxiaoxing.toolkit.string;
+package com.guoxiaoxing.toolkit.resource;
 
 import android.app.Fragment;
 import android.content.Context;

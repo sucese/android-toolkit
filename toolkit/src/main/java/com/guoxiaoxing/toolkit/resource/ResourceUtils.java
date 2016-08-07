@@ -8,8 +8,6 @@ import java.util.List;
 
 import android.content.Context;
 
-import com.guoxiaoxing.toolkit.string.StringUtils;
-
 /**
  * Author: guoxiaoxing
  * Email: guoxiaoxingv@163.com

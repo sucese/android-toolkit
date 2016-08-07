@@ -1,6 +1,6 @@
 package com.guoxiaoxing.toolkit.other;
 
-import com.guoxiaoxing.toolkit.string.StringUtils;
+import com.guoxiaoxing.toolkit.resource.StringUtils;
 
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;

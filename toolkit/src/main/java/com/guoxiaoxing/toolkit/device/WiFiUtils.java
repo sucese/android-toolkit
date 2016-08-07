@@ -1,4 +1,4 @@
-package com.guoxiaoxing.toolkit.network;
+package com.guoxiaoxing.toolkit.device;
 
 import android.content.Context;
 import android.net.ConnectivityManager;

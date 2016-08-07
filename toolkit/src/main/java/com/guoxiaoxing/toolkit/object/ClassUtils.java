@@ -15,7 +15,7 @@
  */
 package com.guoxiaoxing.toolkit.object;
 
-import com.guoxiaoxing.toolkit.string.StringUtils;
+import com.guoxiaoxing.toolkit.resource.StringUtils;
 
 import java.io.PrintWriter;
 import java.io.StringWriter;

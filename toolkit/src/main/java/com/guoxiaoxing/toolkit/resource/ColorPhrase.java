@@ -1,4 +1,4 @@
-package com.guoxiaoxing.toolkit.string;
+package com.guoxiaoxing.toolkit.resource;
 
 import java.util.Stack;
 

@@ -1,4 +1,4 @@
-package com.guoxiaoxing.toolkit.string;
+package com.guoxiaoxing.toolkit.resource;
 
 import android.content.Intent;
 import android.content.SharedPreferences;

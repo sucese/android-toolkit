@@ -1,6 +1,6 @@
 package com.guoxiaoxing.toolkit.collection;
 
-import com.guoxiaoxing.toolkit.string.StringUtils;
+import com.guoxiaoxing.toolkit.resource.StringUtils;
 
 import java.util.HashMap;
 import java.util.Iterator;

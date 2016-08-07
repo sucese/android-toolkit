@@ -4,7 +4,7 @@ package com.guoxiaoxing.toolkit.file;
 import android.content.Context;
 
 import com.guoxiaoxing.toolkit.crypto.Charsets;
-import com.guoxiaoxing.toolkit.string.StringUtils;
+import com.guoxiaoxing.toolkit.resource.StringUtils;
 
 import java.io.BufferedReader;
 import java.io.ByteArrayInputStream;

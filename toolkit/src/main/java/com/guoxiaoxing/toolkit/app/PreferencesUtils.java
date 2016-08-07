@@ -1,4 +1,4 @@
-package com.guoxiaoxing.toolkit.preference;
+package com.guoxiaoxing.toolkit.app;
 
 import android.content.Context;
 import android.content.SharedPreferences;
