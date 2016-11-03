@@ -19,16 +19,11 @@ import android.view.WindowManager;
 import java.io.File;
 
 /**
- * Author: guoxiaoxing
- * Email: guoxiaoxingv@163.com
- * Site: https://github.com/guoxiaoxing
- * Date: 16/4/15 下午4:52
- * Function: device status utils
- * <p/>
- * Modification history:
- * Date                 Author              Version             Description
- * --------------------------------------------------------------------------------
- * 16/4/15 下午4:52      guoxiaoxing          1.0               device status utils
+ * For more information, you can visit https://github.com/guoyannan or contact me by
+ * guoyannanvv@163.com
+ *
+ * @author guoyannan
+ * @since 16/11/3 下午2:55
  */
 @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
 public class DeviceUtils {
@@ -401,7 +396,7 @@ public class DeviceUtils {
 
 
     /**
-     * 拍照打开照相机！
+     * 拍照打开照相机
      *
      * @param requestcode 返回值
      * @param activity    上下文

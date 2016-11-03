@@ -5,12 +5,11 @@ import android.os.Build;
 import java.io.File;
 
 /**
- * Author: guoxiaoxing
- * Date: 16/8/2 下午2:08
- * Function: 系统工具类
- * <p>
- * For more information, you can visit https://github.com/guoxiaoxing or contact me by
- * guoxiaoxingv@163.com
+ * For more information, you can visit https://github.com/guoyannan or contact me by
+ * guoyannanvv@163.com
+ *
+ * @author guoyannan
+ * @since 16/11/3 下午2:56
  */
 public class SystemUtils {
 
