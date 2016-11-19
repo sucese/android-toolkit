@@ -1,6 +1,8 @@
 # Android开发工具箱
 
-## 开发工具类
+Android开发工具箱包含两部分内容：开发工具代码与开发工具软件。　
+
+## 开发工具代码
 
 >Android开发工具箱提供日常开发中各种常用的工具类以及各种能提升开发效率与代码质量的第三方库的使用方法与技巧。
 
@@ -25,7 +27,7 @@ time相关工具类
 
 >time相关工具类主要用来处理日期格式化、时间计算等功能。
 
-## 开发者工具
+## 开发工具软件
 
 - [AAPT]()
 - [Lint]()
@@ -36,14 +38,55 @@ time相关工具类
 - [DDMLib]()
 - [GPUProfiler]()
 - [AllocationTracker]()
-- []()
-- []()
+
+
+更多Mac下的开发效率工具请移步[Mac开发效率工具软件]()
 
 ## 开发工具
 
+Java
+
+```
+brew cask install java
+```
+
+Android Studio
+
+```
+brew cask install android-studio
+```
+
 ## 编译工具
 
+Gradle 
+
+清除库缓存
+
+```
+gradle --refresh-dependencies
+```
+
+查看库依赖
+
+```
+gradle app:dependencies
+```
+
+
+
 ## 版本控制
+
+## 调试工具
+
+Debug工具
+
+条件断点
+
+临时断点
+
+异常断点
+
+日志断点
 
 ## 性能分析
 
@@ -54,9 +97,23 @@ time相关工具类
 - [BattryPerformmance]()
 - [AndroidCPUMonitor]()
 - [TrepnProfiler]()
-- []()
-- []()
-- []()
-- []()
 
+## 文档工具
 
+文档编辑
+
+Markdown：http://pad.haroopress.com/
+
+文档生成
+
+MkDocs：http://www.mkdocs.org/
+
+## 博客工具
+
+个人博客
+
+Hexo：https://hexo.io/zh-cn/
+
+开发论坛
+
+NodeBB：https://community.nodebb.org/
