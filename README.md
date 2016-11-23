@@ -6,6 +6,30 @@ Android开发工具箱包含两部分内容：开发工具代码与开发工具�
 
 >Android开发工具箱提供日常开发中各种常用的工具类以及各种能提升开发效率与代码质量的第三方库的使用方法与技巧。
 
+[![](https://jitpack.io/v/guoxiaoxing/android-develop-toolkit.svg)](https://jitpack.io/#guoxiaoxing/android-develop-toolkit)
+
+
+To get a Git project into your build:
+
+Step 1. Add it in your root build.gradle at the end of repositories:
+
+```
+allprojects {
+    repositories {
+		...
+	    maven { url "https://jitpack.io" }
+    }
+}
+```
+
+Step 2. Add the dependency
+
+```
+dependencies {
+    compile 'com.github.guoxiaoxing:android-develop-toolkit:v1.0.0'
+}
+```
+
 另外, Google也为我们提供了良好的编程工程[Guava](https://github.com/google/guava), 关于Guava的使用教程请参见[Android开发工具箱: Guava中文教程](https://github.com/guoxiaoxing/android-develop-toolkit/blob/master/doc/Android%E5%BC%80%E5%8F%91%E5%B7%A5%E5%85%B7%E7%AE%B1:%20Guava%E4%B8%AD%E6%96%87%E6%95%99%E7%A8%8B.md), 由于Guava很庞大
 为了避免方法数上的瓶颈, 我们可以抽取出部分功能使用。
 
