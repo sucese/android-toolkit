@@ -1,5 +1,10 @@
 ## Android开发工具箱
 
+[![Download](https://api.bintray.com/packages/guoxiaoxing/maven/toolkit/images/download.svg)](https://bintray.com/guoxiaoxing/maven/toolkit/_latestVersion)
+[![License](https://img.shields.io/github/license/guoxiaoxing/toolkit.svg)](https://jitpack.io/#guoxiaoxing/toolkit) 
+[![Stars](https://img.shields.io/github/stars/guoxiaoxing/toolkit.svg)](https://jitpack.io/#guoxiaoxing/toolkit) 
+[![Forks](https://img.shields.io/github/forks/guoxiaoxing/toolkit.svg)](https://jitpack.io/#guoxiaoxing/toolkit) 
+
 Gradle
 
 ``` 
@@ -13,16 +18,6 @@ compile 'com.github.guoxiaoxing:toolkit:1.0.0'
 // init it in the function of onCreate in ur Application
 Utils.init(application);
 ```
-
-
-## Proguard
-
-```
--keep class com.blankj.utilcode.** { *; }
--keepclassmembers class com.blankj.utilcode.** { *; }
--dontwarn com.blankj.utilcode.**
-```
-
 
 ## APIs
 

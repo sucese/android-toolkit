@@ -13,16 +13,6 @@ compile 'com.github.guoxiaoxing:toolkit:1.0.0'
 Utils.init(application);
 ```
 
-
-## Proguard
-
-```
--keep class com.blankj.utilcode.** { *; }
--keepclassmembers class com.blankj.utilcode.** { *; }
--dontwarn com.blankj.utilcode.**
-```
-
-
 ## APIs
 
 * ### About Activity→[ActivityUtils.java][activity.java]→[Demo][activity.demo]
